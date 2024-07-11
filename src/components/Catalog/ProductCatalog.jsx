@@ -38,7 +38,7 @@ const ProductCatalog = ({ addToCart }) => {
 
   return (
     <div className="product-cat p-4 sm:p-6 lg:p-8 bg-white shadow-md rounded-lg">
-      <h2 className="text-2xl font-bold mb-4">Acme</h2>
+      <h2 className="text-2xl font-bold mb-4">Acme 1</h2>
       <div className="search-and-sort flex flex-col sm:flex-row justify-between items-center mb-6">
         <input
           type="text"

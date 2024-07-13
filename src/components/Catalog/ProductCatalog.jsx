@@ -43,7 +43,7 @@ const ProductCatalog = ({ addToCart }) => {
           placeholder="Search by title"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="w-full sm:w-auto mb-4 sm:mb-0 p-3 border border-gray-300 rounded shadow-inner bg-opacity-20 bg-black text-white" 
+          className="w-full sm:w-auto mb-4 sm:mb-0 p-3 border border-gray-300 rounded shadow-inner bg-opacity-20 bg-black text-black"
         />
         <select
           value={sortBy}
@@ -58,9 +58,7 @@ const ProductCatalog = ({ addToCart }) => {
       <div className="product-list grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {sortedProducts().map(product => (
           <div key={product.id} className="product flex flex-col items-center p-4 bg-white bg-opacity-80 backdrop-filter backdrop-blur-lg rounded-lg shadow-lg transition transform hover:scale-105 duration-300">
-            <div className="image-container w-full h-55 flex items-center justify-center mb-2 rounded">
-              <img src={product.image} alt={product.title} className="max-h-full max-w-full object-contain" />
-            </div>
+            <img src={product.image} alt={product.title} className="w-full h-55 object-cover mb-2 rounded" />
             <h3 className="text-lg font-medium mb-1 text-gray-900">{product.title}</h3>
             <p className="text-gray-700 mb-2">${product.price.toFixed(2)}</p>
             <button 
